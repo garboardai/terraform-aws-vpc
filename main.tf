@@ -1,4 +1,4 @@
-# Cross-repo reach probe: a change at the module root reaches every
+# Cross-repo reach probe (2): a change at the module root reaches every
 # repository that consumes this module at a tracking ref.
 locals {
   len_public_subnets      = max(length(var.public_subnets), length(var.public_subnet_ipv6_prefixes))
@@ -1543,3 +1543,5 @@ resource "aws_default_route_table" "default" {
     var.default_route_table_tags,
   )
 }
+
+# probe synchronize
